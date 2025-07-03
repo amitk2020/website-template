@@ -1,60 +1,39 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ContactForm from "./assets/Components/ContactForm.jsx";
-
 
 function App() {
   return (
-    <div style={{ fontFamily: "Arial, sans-serif", width: "100%", margin: 0, padding: 0 }}>
-      <header style={styles.header}>
-        <h1 style={{ margin: 0 }}>My Company</h1>
-        <nav>
-          <a href="#" style={styles.navLink}>Home</a>
-          <a href="#contact" style={styles.navLink}>Contact</a>
-        </nav>
+    <div className="d-flex flex-column min-vh-100">
+      {/* Header */}
+      <header className="bg-primary text-white py-3">
+        <div className="container d-flex justify-content-between align-items-center">
+          <h1 className="h4 mb-0">My Company</h1>
+          <nav>
+            <a href="#" className="text-white me-3 text-decoration-none">Home</a>
+            <a href="#contact" className="text-white text-decoration-none">Contact</a>
+          </nav>
+        </div>
       </header>
 
-      <main style={styles.hero}>
-        <h2>Welcome to Our Website</h2>
-        <p>We provide awesome services and solutions tailored for you.</p>
+      {/* Hero Section */}
+      <div className="container text-center py-5">
+        <h1 className="text-primary">Welcome to My Bootstrap + React App</h1>
+        <p className="lead">We provide awesome services and solutions tailored for you.</p>
+        <button className="btn btn-success mt-3">Click Me</button>
+      </div>
+
+      {/* Contact Section */}
+      <main className="container my-5" id="contact">
+        <h2 className="mb-4">Get in Touch</h2>
+        <ContactForm />
       </main>
 
-      <section id="contact">
-        <ContactForm />
-      </section>
-
-      <footer style={styles.footer}>
-        <p>&copy; 2025 My Company. All rights reserved.</p>
+      {/* Footer */}
+      <footer className="bg-dark text-white text-center py-3 mt-auto">
+        <p className="mb-0">&copy; 2025 My Company. All rights reserved.</p>
       </footer>
     </div>
   );
 }
-const styles = {
-  header: {
-    backgroundColor: "#007bff",
-    color: "#fff",
-    padding: "1rem 2rem",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  navLink: {
-    color: "#fff",
-    marginLeft: "1rem",
-    textDecoration: "none",
-    fontWeight: "bold",
-  },
-  hero: {
-    padding: "4rem 2rem",
-    textAlign: "center",
-    backgroundColor: "#f4f4f4",
-    color: "#333",
-  },
-  footer: {
-    backgroundColor: "#333",
-    color: "#fff",
-    textAlign: "center",
-    padding: "1rem",
-    marginTop: "2rem",
-  }
-};
 
 export default App;
