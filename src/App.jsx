@@ -1,20 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ContactForm from "./assets/Components/ContactForm.jsx";
+import Header from './assets/Components/Header.jsx';
 
 function App() {
   return (
     <div className="d-flex flex-column min-vh-100">
-      {/* Header */}
-      <header className="bg-primary text-white py-3">
-        <div className="container d-flex justify-content-between align-items-center">
-          <h1 className="h4 mb-0">My Company</h1>
-          <nav>
-            <a href="#" className="text-white me-3 text-decoration-none">Home</a>
-            <a href="#contact" className="text-white text-decoration-none">Contact</a>
-          </nav>
-        </div>
-      </header>
 
+      <Header />
       {/* Hero Section */}
       <div className="container text-center py-5">
         <h1 className="text-primary">Welcome to My Bootstrap + React App</h1>
