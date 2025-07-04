@@ -1,0 +1,55 @@
+/* Banner.css */
+
+.custom-banner {
+  display: flex;
+  height: 550px;
+  width: 100%;
+  position: relative;
+  font-family: "Montserrat", Arial, sans-serif;
+  overflow: hidden;
+  background: url("/images/home-banner.jpg") top center/cover no-repeat;
+}
+
+.banner-overlay {
+  background: #e67e23;
+  color: #fff;
+  flex: 0 0 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4vw;
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+  z-index: 2;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.banner-btn {
+  background: #ffe000;
+  color: #222;
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: background 0.2s, color 0.2s;
+  max-width: 300px;
+}
+
+.banner-btn:hover {
+  background: #fff200;
+  color: #111;
+}
+
+.banner-image {
+  flex: 1 1 58%;
+  min-width: 0;
+  z-index: 1;
+}
