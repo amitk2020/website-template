@@ -9,7 +9,7 @@ function App() {
       <Header />
       {/* Hero Section */}
       <div className="container text-center py-5">
-        <h1 className="text-primary">Welcome to My Bootstrap + React App</h1>
+        <h1 className="text-primary">Hero Title</h1>
         <p className="lead">We provide awesome services and solutions tailored for you.</p>
         <button className="btn btn-success mt-3">Click Me</button>
       </div>
