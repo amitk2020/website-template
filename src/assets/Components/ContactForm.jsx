@@ -38,7 +38,7 @@ function ContactForm() {
                         <input
                             type="text"
                             name="name"
-                            placeholder="Your Name"
+                            placeholder="Your Name*"
                             required
                             className="form-control"
                         />
@@ -53,7 +53,33 @@ function ContactForm() {
                             className="form-control"
                         />
                     </div>
+                    {/* Phone Number Field */}
+                    <div className="col-md-6">
+                        <input
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="Your Phone Number"
+                            required
+                            className="form-control"
+                        />
+                    </div>
 
+                    {/* Dropdown Field */}
+                    <div className="col-md-6">
+                        <select
+                            name="reason"
+                            id="reason"
+                            required
+                            className="form-select"
+                        >
+                            <option value="">Select a reason</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Quote Request">Quote Request</option>
+                            <option value="Support">Support</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
                     <div className="col-12">
                         <textarea
                             name="message"

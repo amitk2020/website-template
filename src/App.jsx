@@ -16,7 +16,6 @@ function App() {
 
       {/* Contact Section */}
       <main className="container my-5" id="contact">
-        <h2 className="mb-4">Get in Touch</h2>
         <ContactForm />
       </main>
 
