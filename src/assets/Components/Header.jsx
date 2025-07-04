@@ -1,8 +1,27 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+// Header.jsx
+import { NavLink } from "react-router-dom";
+import { FaCaretDown } from "react-icons/fa";
+import styles from "./Header.module.css";
 
-function Header() {
+const menu = [
+    { label: "Home", to: "/" },
+    { label: "About", to: "/about" },
+
+    {
+        label: "Services",
+        to: "/services",
+        submenu: [
+            { label: "Web Design", to: "/services/web-design" },
+            { label: "SEO", to: "/services/seo" },
+            { label: "Marketing", to: "/services/marketing" },
+        ]
+    },
+    { label: "Contact", to: "/contact" }
+];
+
+export default function Header() {
     return (
+
         <header className="border-bottom shadow-sm">
             {/* Top Info Row */}
             <div className="container py-2">
@@ -47,46 +66,39 @@ function Header() {
                 <div className="row">
                     <div className="col-md-9">
                         {/* Navigation */}
-                        <nav className="border-top">
-                            <div className="container">
-                                <ul className="nav nav-pills py-2 gap-2 justify-content-center justify-content-md-start">
-                                    <li className="nav-item">
-                                        <a className="nav-link active text-dark" href="#">
-                                            Home
-                                        </a>
+                        <nav className={styles.nav}>
+                            <ul className={styles.navList}>
+                                {menu.map((item, idx) => (
+                                    <li className={styles.navItem} key={idx}>
+                                        <NavLink
+                                            to={item.to}
+                                            className={({ isActive }) =>
+                                                isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+                                            }
+                                            end={!item.submenu}
+                                        >
+                                            {item.label}
+                                            {item.submenu && <span className={styles.caret}><FaCaretDown /></span>}
+                                        </NavLink>
+                                        {item.submenu && (
+                                            <ul className={styles.submenu}>
+                                                {item.submenu.map((sub, subIdx) => (
+                                                    <li key={subIdx}>
+                                                        <NavLink
+                                                            to={sub.to}
+                                                            className={({ isActive }) =>
+                                                                isActive ? `${styles.subNavLink} ${styles.active}` : styles.subNavLink
+                                                            }
+                                                        >
+                                                            {sub.label}
+                                                        </NavLink>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
                                     </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link text-dark" href="#">
-                                            Services
-                                        </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link text-dark" href="#">
-                                            Portfolio
-                                        </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link text-dark" href="#">
-                                            Pages
-                                        </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link text-dark" href="#">
-                                            News
-                                        </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link text-dark" href="#">
-                                            Elements
-                                        </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link text-dark" href="#">
-                                            Contact Us
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                                ))}
+                            </ul>
                         </nav>
                     </div>
                     {/* Search, Cart, Contact Button */}
@@ -98,7 +110,6 @@ function Header() {
             </div>
 
         </header>
+
     );
 }
-
-export default Header;

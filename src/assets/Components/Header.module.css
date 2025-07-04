@@ -1,0 +1,82 @@
+/* Header.module.css */
+
+.nav {
+  background: #fff;
+  border-top: 2px solid #eee;
+  padding: 0.5rem 0;
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: #222;
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.active {
+  color: #007bff;
+}
+
+.caret {
+  font-size: 1em;
+  color: #007bff;
+  margin-right: 0.3em;
+}
+
+.submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 180px;
+  background: #e67e23;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  opacity: 0;
+  list-style: none;
+  transform: translateY(20px) scaleY(0.95);
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 100;
+  border-radius: 0 0 8px 8px;
+  padding: 0.5rem 0;
+}
+
+.navItem:hover .submenu,
+.navItem:focus-within .submenu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scaleY(1);
+}
+
+.subNavLink {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.subNavLink:hover,
+.subNavLink.active {
+  background: #f2f2f2;
+  color: #007bff;
+}
