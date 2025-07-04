@@ -1,0 +1,52 @@
+.slider-container {
+  width: 100vw; /* full viewport width */
+  height: 500px; /* fixed height */
+  position: relative; /* normal document flow */
+  margin: 0 auto;
+  font-family: "Montserrat", Arial, sans-serif;
+  overflow: hidden;
+}
+
+.main-swiper,
+.slide-content {
+  width: 100vw;
+  height: 500px; /* match container height */
+}
+
+.slide-image {
+  position: absolute;
+  width: 100vw;
+  height: 500px; /* fixed height */
+  object-fit: cover;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  filter: brightness(0.7);
+}
+
+.slide-caption {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 2rem 4rem;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+/* Change arrow color */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ff6600; /* your desired color */
+  /* Optional: increase size */
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #ff3300; /* hover color */
+}

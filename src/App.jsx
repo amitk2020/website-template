@@ -2,12 +2,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ContactForm from "./assets/Components/ContactForm.jsx";
 import Header from './assets/Components/Header.jsx';
 import Banner from './assets/Components/Banner.jsx';
-
+import ImageSlider from './assets/Components/ImageSlider.jsx';
 function App() {
   return (
     <div className="d-flex flex-column min-vh-100">
 
       <Header />
+      <ImageSlider />
       {/* Hero Section */}
       <Banner />
 

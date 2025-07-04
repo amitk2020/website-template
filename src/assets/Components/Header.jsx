@@ -24,14 +24,14 @@ export default function Header() {
 
         <header className="border-bottom shadow-sm">
             {/* Top Info Row */}
-            <div className="container py-2">
+            <div className="container py-3">
                 <div className="row align-items-center">
                     {/* Logo */}
                     <div className="col-md-6 d-flex align-items-center">
                         <img
-                            src="/images/logo-pro.png"
+                            src="/images/logo-group.png"
                             alt="Compactor Logo"
-                            style={{ maxHeight: 40 }}
+                            style={{ maxHeight: 60 }}
                             className="me-2"
                         />
 
@@ -62,7 +62,7 @@ export default function Header() {
 
                 </div>
             </div>
-            <div className="container">
+            <div className="container py-3">
                 <div className="row">
                     <div className="col-md-9">
                         {/* Navigation */}
