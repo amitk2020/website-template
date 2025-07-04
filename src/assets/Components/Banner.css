@@ -2,12 +2,12 @@
 
 .custom-banner {
   display: flex;
-  height: 550px;
+  height: 650px;
   width: 100%;
   position: relative;
   font-family: "Montserrat", Arial, sans-serif;
   overflow: hidden;
-  background: url("/images/home-banner.jpg") top center/cover no-repeat;
+  background: url("/images/home-2.jpg") top center/cover no-repeat;
 }
 
 .banner-overlay {

@@ -9,13 +9,13 @@ function App() {
 
       <Header />
       <ImageSlider />
-      {/* Hero Section */}
-      <Banner />
-
       {/* Contact Section */}
       <main className="container my-5" id="contact">
         <ContactForm />
       </main>
+      {/* Hero Section */}
+      <Banner />
+
 
       {/* Footer */}
       <footer className="bg-dark text-white text-center py-3 mt-auto">
